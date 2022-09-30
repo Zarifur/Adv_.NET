@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Regiestation";
+}
+
+<h2>Regiestation</h2>
+
+<form action="/Vaccine/Regiestation" method="post">
+
+    <label>Name</label><br />
+    <input type="text" name="Name" value="" placeholder="Name" /><br>
+    <span class="text-danger">   @Html.ValidationMessage("Name")</span><br />
+
+    <label>Email</label><br />
+    <input type="text" name="Email" value="" placeholder="Email" /><br />
+    <span class="text-danger">   @Html.ValidationMessage("Email")</span><br />
+
+    <label>Phone</label><br />
+    <input type="text" name="phone" value="" placeholder="Phone" /><br />
+    <span class="text-danger">   @Html.ValidationMessage("phone")</span><br />
+
+    <label>Date Of Birth</label><br />
+    <input type="text" name="DoB" value="" placeholder="Date Of Birth" /><br />
+    <span class="text-danger">   @Html.ValidationMessage("DoB")</span><br />
+
+    <label>Select Blood Group</label><br />
+    <select>
+        <option value="">Select Blood Group</option>
+        <option name="Blood_Group" value="A+">A+</option>
+        <option name="Blood_Group" value="A-">A-</option>
+        <option name="Blood_Group" value="B+">B+</option>
+        <option name="Blood_Group" value="B-">B-</option>
+        <option name="Blood_Group" value="O+">O+</option>
+        <option name="Blood_Group" value="O-">O-</option>
+    </select><br />
+    <span class="text-danger">   @Html.ValidationMessage("Name")</span><br />
+
+    <label> Gender</label><br />
+    <input type="radio" name="Gender" value="Male" />
+    <label>Male</label>
+    <input type="radio" name="Gender" value="Female" />
+    <label>Female</label><br />
+    <span class="text-danger">   @Html.ValidationMessage("Gender")</span><br />
+
+    <label>Password</label><br />
+    <input type="password" name="password" value="" placeholder="Password" /><br />
+    <span class="text-danger">   @Html.ValidationMessage("password")</span><br />
+
+    <label>Confirm Password</label><br />
+    <input type="password" name="ConPass" value="" placeholder="Confirm Password" /><br />
+    <span class="text-danger">   @Html.ValidationMessage("ConPass")</span><br />
+    <br />
+
+    <input class="form-control btn btn-success" type="submit" name="submit" value="Submit" /><br />
+</form>
