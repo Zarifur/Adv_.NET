@@ -73,5 +73,11 @@ namespace Lab3.Controllers
 
         }
 
+
+        public ActionResult CartList()
+        {
+            return View();
+        }
+
     }
 }
